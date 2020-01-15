@@ -16,7 +16,9 @@
 //4: make an <img>with data
   console.log('catching bows');
 
-  fetch('rainbow.jpg');
+  fetch('rainbow.jpg').then(response => {
+    console.log(response);
+  });
   </script>
   </body>
 </html>
