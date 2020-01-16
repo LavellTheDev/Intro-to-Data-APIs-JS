@@ -7,25 +7,21 @@
     <title>Coding Train: Data/APIs 1</title>
   </head>
   <body>
-    <h1>Fetch a Rainbow</h1>
-    <img src="" id="rainbow" width="480" />
+    <img src="" id="rainbow" width="480" alt="">
     <script>
-      console.log('about to fetch a rainbow');
+    console.log("About to fetch some bows");
 
-      catchRainbow()
-        .then(response => {
-          console.log('yay');
-        })
-        .catch(error => {
-          console.log('error!');
-          console.error(error);
-        });
+    catchRainbow();
 
-      async function catchRainbow() {
-        const response = await fetch('rainbow.jpg');
-        const blob = await response.blob();
-        document.getElementById('rainbow').src = URL.createObjectURL(blob);
-      }
+    async function catchRainbow(){
+      const response = await fetch('rainbow.jpg');
+      const blob = await response.blob()
+      document.getElementById('rainbow').src = URL.createObjectURL(blob);
+
+    }
+
+
+
     </script>
   </body>
 </html>
